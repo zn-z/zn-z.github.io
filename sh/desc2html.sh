@@ -1,6 +1,6 @@
 #!/bin/bash
 
-ncol=5
+ncol=4
 cat $libdir/desc.tsv| awk -F"\t" -v ncol=$ncol '
 BEGIN {
   print "<!DOCTYPE html>"

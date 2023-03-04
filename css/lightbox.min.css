@@ -134,6 +134,7 @@ body.lb-disable-scrolling {
   line-height:1.1em
 }
 .lb-data .lb-caption {
+  font-family: "Arial","Hiragino Kaku Gothic ProN" sans-serif;
   font-size:20px;
   font-weight:700;
   line-height:1em
