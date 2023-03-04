@@ -87,4 +87,4 @@ BEGIN {
   print "    <script src=\"js/lightbox-plus-jquery.min.js\"></script>"
   print "  </body>"
   print "</html>"
-}' > $HOME/Pictures/hp/test.html
+}' > $HOME/Pictures/hp/index.html
