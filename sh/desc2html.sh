@@ -14,7 +14,7 @@ BEGIN {
   print "  <body>"
   print "    <section>"
 } {
-  gsub("/Users/zou/Pictures/hp", "https://raw.githubusercontent.com/zn-z/zn-z.github.io/main", $4)
+  gsub("/Users/zou/Pictures/hp/", "", $4)
   if ($5 == "new") {
     n["new"]++
     link["new"] = link["new"]"__SEP__"$4
