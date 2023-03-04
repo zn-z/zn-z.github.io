@@ -8,6 +8,7 @@ BEGIN {
   print "  <head>"
   print "    <meta charset=\"utf-8\">"
   print "    <title>My Tabi</title>"
+  print "    <link rel=\"shortcut icon\" href=\"icon/favicon.ico\">"
   print "    <link rel=\"stylesheet\" href=\"css/lightbox.min.css\">"
   print "    <link rel=\"stylesheet\" href=\"css/style.css\">"
   print "  </head>"
