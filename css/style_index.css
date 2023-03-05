@@ -1,0 +1,64 @@
+body {
+  background-color: black;
+}
+
+.flex-container {
+  display: flex; /* 子要素をflexboxで揃える */
+  flex-direction: column; /* 子要素をflexboxにより縦方向に揃える */
+  justify-content: center; /* 子要素をflexboxにより中央に配置する */
+  align-items: center;  /* 子要素をflexboxにより中央に配置する */
+  width: 100%; /* 見た目用 */
+  height: 97vh; /* 見た目用 */
+}
+
+.flex-container-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-wrap{
+  margin: 2px 2px;
+  height: 25vh;
+  background-color: black;
+  overflow: hidden;
+}
+
+.image-wrap img {
+  height: 25vh;
+  filter: grayscale(1);
+}
+
+.image-wrap:hover img {
+  transform: scale(1.1);
+  filter: grayscale(0);
+  opacity: 0.5;
+  transition: 0.3s;
+}
+
+.image-wrap:hover .gallery__caption {
+  opacity: 1;
+}
+
+figure, figcaption{
+  margin:0;
+  font-size:100%;
+  font:inherit;
+  vertical-align:baseline
+}
+
+.gallery__thumb {
+  position: relative;
+}
+
+.gallery__caption {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-family: "Arial","Hiragino Kaku Gothic ProN" sans-serif;
+  font-size: 40px;
+  color: white;
+  opacity: 0;
+  transition: 0.3s;
+  transform: translate(-50%, -50%);
+}
