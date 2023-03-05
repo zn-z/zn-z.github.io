@@ -38,7 +38,7 @@ body.lb-disable-scrolling {
   position:relative;
   width:250px;
   height:250px;
-  margin:0 auto;
+  margin:5px auto;
   border-radius:4px;
   background-color:#fff
 }
