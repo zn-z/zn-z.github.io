@@ -61,14 +61,14 @@ body {
   opacity: 1;
 }
 
-.image-wrap-sp:hover img {
+.image-wrap-sp:active img {
   transform: scale(1.1);
   filter: grayscale(0);
   opacity: 0.5;
   transition: 0.3s;
 }
 
-.image-wrap-sp:hover .gallery__caption {
+.image-wrap-sp:active .gallery__caption {
   opacity: 1;
 }
 
