@@ -44,10 +44,10 @@ figure,figcaption{
   margin: 2px;
   overflow: hidden;
 }
-.gallery__link:active .gallery__image {
+.gallery__link:hover .gallery__image {
   filter: grayscale(0);
 }
-.gallery__link:active .gallery__caption {
+.gallery__link:hover .gallery__caption {
   opacity: 1;
 }
 .gallery__thumb {
