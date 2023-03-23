@@ -11,6 +11,14 @@ body {
   height: 97vh; /* 見た目用 */
 }
 
+.flex-container-sp {
+  display: flex; /* 子要素をflexboxで揃える */
+  flex-direction: column; /* 子要素をflexboxにより縦方向に揃える */
+  justify-content: center; /* 子要素をflexboxにより中央に配置する */
+  align-items: center;  /* 子要素をflexboxにより中央に配置する */
+  width: 100%; /* 見た目用 */
+}
+
 .flex-container-row {
   display: flex;
   justify-content: center;
@@ -29,6 +37,19 @@ body {
   filter: grayscale(1);
 }
 
+.image-wrap-sp {
+  margin: 2px 2px;
+  width: 90vw;
+  background-color: black;
+  overflow: hidden;
+}
+
+.image-wrap-sp img {
+  width: 90vw;
+  filter: grayscale(1);
+}
+
+
 .image-wrap:hover img {
   transform: scale(1.1);
   filter: grayscale(0);
@@ -39,6 +60,18 @@ body {
 .image-wrap:hover .gallery__caption {
   opacity: 1;
 }
+
+.image-wrap-sp:hover img {
+  transform: scale(1.1);
+  filter: grayscale(0);
+  opacity: 0.5;
+  transition: 0.3s;
+}
+
+.image-wrap-sp:hover .gallery__caption {
+  opacity: 1;
+}
+
 
 figure, figcaption{
   margin:0;
