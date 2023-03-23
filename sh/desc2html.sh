@@ -5,7 +5,7 @@ htmldir=$HOME/Pictures/hp/html
 
 make_html () {
   if [ $1 = "sp" ]; then
-    ncol=2
+    ncol=1
   else
     ncol=4
   fi
@@ -59,12 +59,14 @@ make_html () {
         print "        <div class=\"gallery__column\">"
         rowEnd = rowStart + row[i] - 1
         for (j=rowStart; j<=rowEnd; j++) {
-          print "          <a href=\""linkArray[j]"\" data-lightbox=\""tag"\" data-title=\""descArray[j]"\" class=\"gallery__link\">"
+          if (device == "sp") print "          <div class=\"gallery__link\">"
+          else                print "          <a href=\""linkArray[j]"\" data-lightbox=\""tag"\" data-title=\""descArray[j]"\" class=\"gallery__link\">"
           print "            <figure class=\"gallery__thumb\">"
           print "              <img src=\""linkArray[j]"\" class=\"gallery__image\">"
           print "              <figcaption class=\"gallery__caption\">"descArray[j]"</figcaption>"
           print "            </figure>"
-          print "          </a>"
+          if (device == "sp") print "          </div>"
+          else                print "          </a>"
         }
         print "        </div>"
         rowStart = rowEnd + 1
