@@ -24,9 +24,15 @@ make_html () {
       print "    <title>My Tabi</title>"
       print "    <link rel=\"shortcut icon\" href=\"../icon/favicon.ico\">"
       print "    <link rel=\"stylesheet\" href=\"../css/lightbox.min.css\">"
-      print "    <link rel=\"stylesheet\" href=\"../css/style.css\">"
+      if (device == "sp") {
+        print "    <link rel=\"stylesheet\" href=\"../css/lightbox.min_sp.css\">"
+        print "    <link rel=\"stylesheet\" href=\"../css/style_sp.css\">"
+      } else {
+        print "    <link rel=\"stylesheet\" href=\"../css/lightbox.min.css\">"
+        print "    <link rel=\"stylesheet\" href=\"../css/style.css\">"
+      }
       print "  </head>"
-      print "  <body>"
+      print "  <body ontouchstart="">"
       print "    <section>"
       print "      <h1>@ "tag"</h1>"
     } $5 == tag {
@@ -50,8 +56,7 @@ make_html () {
           split(desc, descArray, "__SEP__")
       rowStart = 1
       for (i=1; i<=ncol; i++) {
-        if (device == "sp") print "        <div class=\"gallery__column-sp\">"
-        else                print "        <div class=\"gallery__column\">"
+        print "        <div class=\"gallery__column\">"
         rowEnd = rowStart + row[i] - 1
         for (j=rowStart; j<=rowEnd; j++) {
           print "          <a href=\""linkArray[j]"\" data-lightbox=\""tag"\" data-title=\""descArray[j]"\" class=\"gallery__link\">"
