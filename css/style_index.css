@@ -89,9 +89,11 @@ figure, figcaption{
   top: 50%;
   left: 50%;
   sans-serif;
-  font-size: clamp(20px, 10vw, 60px);
+  font-size: 200%;
   color: white;
   opacity: 0;
   transition: 0.3s;
   transform: translate(-50%, -50%);
 }
+
+

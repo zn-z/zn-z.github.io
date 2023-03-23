@@ -39,6 +39,11 @@ figure,figcaption{
   flex-direction: column;
   width: 25%;
 }
+.gallery__column-sp {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
 .gallery__link {
   margin: 2px;
   overflow: hidden;

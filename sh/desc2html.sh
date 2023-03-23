@@ -15,7 +15,7 @@ make_html () {
     else
       outhtml=$htmldir/$tag.html
     fi
-    cat $libdir/desc.tsv| awk -F"\t" -v ncol=$ncol -v tag="$tag" '
+    cat $libdir/desc.tsv| awk -F"\t" -v ncol=$ncol -v tag="$tag" -v device="$1" '
     BEGIN {
       print "<!DOCTYPE html>"
       print "<html lang=\"ja\">"
@@ -50,7 +50,8 @@ make_html () {
           split(desc, descArray, "__SEP__")
       rowStart = 1
       for (i=1; i<=ncol; i++) {
-        print "        <div class=\"gallery__column\">"
+        if (device == "sp") print "        <div class=\"gallery__column-sp\">"
+        else                print "        <div class=\"gallery__column\">"
         rowEnd = rowStart + row[i] - 1
         for (j=rowStart; j<=rowEnd; j++) {
           print "          <a href=\""linkArray[j]"\" data-lightbox=\""tag"\" data-title=\""descArray[j]"\" class=\"gallery__link\">"
