@@ -23,7 +23,6 @@ make_html () {
       print "    <meta charset=\"utf-8\">"
       print "    <title>My Tabi</title>"
       print "    <link rel=\"shortcut icon\" href=\"../icon/favicon.ico\">"
-      print "    <link rel=\"stylesheet\" href=\"../css/lightbox.min.css\">"
       if (device == "sp") {
         print "    <link rel=\"stylesheet\" href=\"../css/lightbox.min_sp.css\">"
         print "    <link rel=\"stylesheet\" href=\"../css/style_sp.css\">"
