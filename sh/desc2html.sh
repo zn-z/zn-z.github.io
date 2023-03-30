@@ -72,14 +72,16 @@ make_html () {
       }
       print "      </div>"
       print "    </section>"
-      print "    <script src=\"../js/lightbox-plus-jquery.min.js\"></script>"
-      print "    <script>"
-      print "      lightbox.option({"
-      print "        \"imageFadeDuration\": 0,"
-      print "        \"wrapAround\": true,"
-      print "        \"disableScrolling\": true"
-      print "      })"
-      print "    </script>"
+      if (device == "pc") {
+        print "    <script src=\"../js/lightbox-plus-jquery.min.js\"></script>"
+        print "    <script>"
+        print "      lightbox.option({"
+        print "        \"imageFadeDuration\": 0,"
+        print "        \"wrapAround\": true,"
+        print "        \"disableScrolling\": true"
+        print "      })"
+        print "    </script>"
+      }
       print "  </body>"
       print "</html>"
     }' > $outhtml
